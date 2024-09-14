@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>ToDo</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20240914162514">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<main class="page">
+			<div class="tasks">
+				<div class="tasks__container">
+					<div class="tasks__title">ToDo приложение</div>
+					<div class="tasks__desc">
+						<p>список задач на сегодня</p>
+					</div>
+					<div class="tasks__card card-tasks">
+						<ul id="tasksList" class="card-tasks__list list-group-flush"></ul>
+					</div>
+					<div class="tasks__card card-tasks">
+						<div class="card-tasks__header">Добавить новую задачу</div>
+						<div class="card-tasks__body">
+							<form id="formToDo" class="card-tasks__form">
+								<div class="card-tasks__form-group">
+									<input type="text" class="card-tasks__form-input" id="taskInput" placeholder="Текст задачи" required>
+									<small id="emailHelp" class="card-tasks__form-text text-muted">Что делаем, сколько времени тратим, какой результат получаем.</small>
+								</div>
+								<button type="submit" class="card-tasks__button active">Добавить</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+	<script src="js/app.min.js?_v=20240914162514"></script>
+</body>
+
+</html>

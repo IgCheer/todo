@@ -1,0 +1,463 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:regular,700&display=swap);
+
+@charset "UTF-8";
+
+* {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  display: inline-block;
+}
+
+html,
+body {
+  height: 100%;
+  min-width: 320px;
+}
+
+body {
+  color: #000;
+  line-height: 1;
+  font-family: "Roboto";
+  font-size: 1rem;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input,
+button,
+textarea {
+  font-family: "Roboto";
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input,
+textarea {
+  width: 100%;
+}
+
+button,
+select,
+option {
+  cursor: pointer;
+}
+
+a {
+  display: inline-block;
+  color: inherit;
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+.lock body {
+  overflow: hidden;
+  -ms-touch-action: none;
+      touch-action: none;
+  -ms-scroll-chaining: none;
+      overscroll-behavior: none;
+}
+
+.wrapper {
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+}
+
+@supports (overflow: clip) {
+  .wrapper {
+    overflow: clip;
+  }
+}
+
+.wrapper > main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.wrapper > * {
+  min-width: 0;
+}
+
+/*
+(i) Стили будут применяться ко
+всем классам, содержащих * __container
+Например, header__container, main__container и т.п.
+Сниппет (HTML): cnt
+*/
+
+[class*=__container] {
+  max-width: 73.125rem;
+  margin: 0 auto;
+  padding: 0 0.9375rem;
+}
+
+/*Свайпер подключать стандартным способом: в _head.htm css и js, js-код писать в общем файле*/
+
+/*Свайпер подключать стандартным способом: в _head.htm css и js, js-код писать в общем файле*/
+
+.ibg {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.ibg--top {
+  -o-object-position: top;
+     object-position: top;
+}
+
+.ibg--bottom {
+  -o-object-position: bottom;
+     object-position: bottom;
+}
+
+.ibg--left {
+  -o-object-position: left;
+     object-position: left;
+}
+
+.ibg--right {
+  -o-object-position: right;
+     object-position: right;
+}
+
+.ibg--contain {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+[data-viewpass-lock] {
+  display: none;
+}
+
+.tasks {
+  background-color: rgb(226, 225, 225);
+  min-height: 100vh;
+}
+
+.tasks__title {
+  font-weight: 700;
+}
+
+.tasks__title:not(:last-child) {
+  margin-bottom: 0.9375rem;
+}
+
+.tasks__desc {
+  font-size: 1.125rem;
+}
+
+.tasks__desc:not(:last-child) {
+  margin-bottom: 2.1875rem;
+}
+
+.card-tasks {
+  padding: 0.9375rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+}
+
+.card-tasks:not(:last-child) {
+  margin-bottom: 1.5625rem;
+}
+
+.card-tasks__list {
+  list-style-type: none;
+  counter-reset: item;
+}
+
+.card-tasks__image {
+  width: 4.25rem;
+  height: 4.25rem;
+}
+
+.card-tasks__image:not(:last-child) {
+  margin-bottom: 0.625rem;
+}
+
+.card-tasks__header {
+  border-radius: 0.5rem 0.5rem 0 0;
+  padding: 0.9375rem;
+  border-bottom: 0.0625rem solid rgb(218, 218, 218);
+  margin-right: -0.9375rem;
+  margin-left: -0.9375rem;
+  margin-top: -0.9375rem;
+  background-color: rgb(246, 244, 244);
+}
+
+.card-tasks__body {
+  padding-top: 0.9375rem;
+}
+
+.card-tasks__form-group:not(:last-child) {
+  margin-bottom: 0.9375rem;
+}
+
+.card-tasks__form-input {
+  height: 2.375rem;
+  padding: 0 0.9375rem;
+  border: 0.0625rem solid rgb(218, 218, 218);
+}
+
+.card-tasks__form-text {
+  padding: 0.5rem 0;
+  display: block;
+  line-height: 1.2;
+}
+
+.card-tasks__form-text.text-muted {
+  color: #6c757d;
+}
+
+.card-tasks__button {
+  padding: 0.75rem 1.5rem;
+  background-color: #0062cc;
+  border-radius: 0.5rem;
+  color: #fff;
+  font-size: 1.25rem;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+
+.empty-list {
+  display: block;
+  text-align: center;
+  padding: 1.5625rem 0.9375rem;
+  margin-right: -0.9375rem;
+  margin-left: -0.9375rem;
+}
+
+.empty-list._none {
+  display: none;
+}
+
+.item-card-task__name {
+  padding-left: 1.875rem;
+  position: relative;
+  counter-increment: item;
+}
+
+.item-card-task__name:before {
+  content: counter(item) ")";
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.item-card-task__name._done {
+  opacity: 0.2;
+  text-decoration: line-through;
+}
+
+.item-card-task__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.3125rem;
+}
+
+.item-card-task__button {
+  width: 2.375rem;
+  height: 2.375rem;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 2.375rem;
+          flex: 0 0 2.375rem;
+  position: relative;
+  background-color: #eee;
+  border-radius: 0.5rem;
+  opacity: 0.5;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.item-card-task__button:focus {
+  opacity: 1;
+}
+
+.item-card-task__button img {
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1.375rem;
+  height: 1.375rem;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.task-item {
+  padding: 1.25rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-column-gap: 0.9375rem;
+     -moz-column-gap: 0.9375rem;
+          column-gap: 0.9375rem;
+  line-height: 1.2;
+}
+
+.task-item:not(:last-child) {
+  border-bottom: 0.0625rem solid rgb(218, 218, 218);
+}
+
+@media (min-width: 73.125em) {
+  .tasks {
+    padding-top: 5.625rem;
+  }
+
+  .tasks {
+    padding-bottom: 5.625rem;
+  }
+
+  .tasks__title {
+    font-size: 3rem;
+  }
+
+  .card-tasks__name {
+    font-size: 1.625rem;
+  }
+
+  .item-card-task__name {
+    font-size: 1.1875rem;
+  }
+}
+
+@media (max-width: 20em) {
+  .tasks {
+    padding-top: 2.8125rem;
+  }
+
+  .tasks {
+    padding-bottom: 2.8125rem;
+  }
+
+  .tasks__title {
+    font-size: 1.625rem;
+  }
+
+  .card-tasks__name {
+    font-size: 1.25rem;
+  }
+
+  .item-card-task__name {
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 20em) and (max-width: 73.125em) {
+@supports (padding-top: clamp( 2.8125rem , 1.7536764706rem  +  5.2941176471vw , 5.625rem )) {
+    .tasks {
+      padding-top: clamp( 2.8125rem , 1.7536764706rem  +  5.2941176471vw , 5.625rem );
+    }
+}
+
+@supports not (padding-top: clamp( 2.8125rem , 1.7536764706rem  +  5.2941176471vw , 5.625rem )) {
+    .tasks {
+      padding-top: calc(2.8125rem + 2.8125 * (100vw - 20rem) / 53.125);
+    }
+}
+
+@supports (padding-bottom: clamp( 2.8125rem , 1.7536764706rem  +  5.2941176471vw , 5.625rem )) {
+    .tasks {
+      padding-bottom: clamp( 2.8125rem , 1.7536764706rem  +  5.2941176471vw , 5.625rem );
+    }
+}
+
+@supports not (padding-bottom: clamp( 2.8125rem , 1.7536764706rem  +  5.2941176471vw , 5.625rem )) {
+    .tasks {
+      padding-bottom: calc(2.8125rem + 2.8125 * (100vw - 20rem) / 53.125);
+    }
+}
+
+@supports (font-size: clamp( 1.625rem , 1.1073529412rem  +  2.5882352941vw , 3rem )) {
+    .tasks__title {
+      font-size: clamp( 1.625rem , 1.1073529412rem  +  2.5882352941vw , 3rem );
+    }
+}
+
+@supports not (font-size: clamp( 1.625rem , 1.1073529412rem  +  2.5882352941vw , 3rem )) {
+    .tasks__title {
+      font-size: calc(1.625rem + 1.375 * (100vw - 20rem) / 53.125);
+    }
+}
+
+@supports (font-size: clamp( 1.25rem , 1.1088235294rem  +  0.7058823529vw , 1.625rem )) {
+    .card-tasks__name {
+      font-size: clamp( 1.25rem , 1.1088235294rem  +  0.7058823529vw , 1.625rem );
+    }
+}
+
+@supports not (font-size: clamp( 1.25rem , 1.1088235294rem  +  0.7058823529vw , 1.625rem )) {
+    .card-tasks__name {
+      font-size: calc(1.25rem + 0.375 * (100vw - 20rem) / 53.125);
+    }
+}
+
+@supports (font-size: clamp( 1rem , 0.9294117647rem  +  0.3529411765vw , 1.1875rem )) {
+    .item-card-task__name {
+      font-size: clamp( 1rem , 0.9294117647rem  +  0.3529411765vw , 1.1875rem );
+    }
+}
+
+@supports not (font-size: clamp( 1rem , 0.9294117647rem  +  0.3529411765vw , 1.1875rem )) {
+    .item-card-task__name {
+      font-size: calc(1rem + 0.1875 * (100vw - 20rem) / 53.125);
+    }
+}
+}
+
+@media (any-hover: hover) {
+  .card-tasks__button:hover {
+    background-color: #034fa0;
+  }
+
+  .item-card-task__button:hover {
+    opacity: 1;
+  }
+}
